@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Nunito;
+  font-weight: 500;
+}
+
+:root {
+  --bgcol1:#000033;
+  --bgcol2:#2B2B4B;
+  --b-rad:6px;
+  --text-col1:#8B8D9A;
+}
+
+.App {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--bgcol1);
+  padding: 25px;
+}
+
+.seksiya1 {
+  width: 100%;
+  padding-left: 26px;
+}
+
+.profil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 31px 23px 31px 15px;
+  width: 312px;
+  height: 117px;
+  background: #2B2B4B;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.profil div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profil .logo {
+  margin-right: 24px;
+}
+
+.profil .texts h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.profil .texts p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #45C86D;
+}
+
+.panel {
+  background-color: var(--bgcol2);
+  border-radius: var(--b-rad);
+  padding: 8px 15px;
+}
+
+.panel .my-tour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 12px;
+  background-color: var(--bgcol1);
+  border-radius: var(--b-rad);
+  margin-bottom: 10px;
+}
+
+.panel .my-tour h3 {
+  font-size: 18px;
+  color: #fff;
+}
+
+.panel .my-tour span {
+  color: #fff;
+  background-color: #014DD8;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 1px 15px;
+  border-radius: 15px;
+}
+
+.panel .panel-list {
+  padding-top: 25px;
+  border-top: 1px solid #525270;
+  margin-bottom: 10px;
+}
+
+.panel .panel-list .item {
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.panel .panel-list .item .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel .panel-list .item .title .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel .panel-list .item .title .text h4 {
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.panel .panel-list .item .title .text img {
+  height: 18px;
+}
+
+.panel .panel-list .item .title img {
+  height: 10px;
+}
+
+.panel .panel-list .item .title span {
+  color: #fff;
+  background-color: #0BB752;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 1px 15px;
+  border-radius: 15px;
+}
+
+.panel .panel-list .item .content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+.panel .panel-list .item .content ul {
+  padding-left: 35px;
+}
+
+.panel .panel-list .item .content ul li {
+  list-style: none;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -1px;
+  color: var(--text-col1);
+  margin-top: 15px;
+}
+
+.panel .panel-list .item .content ul li img {
+  height: 7px;
+  margin-right: 17px;
+}
+
+.panel .panel-list .item .show {
+  height: auto;
+  max-height: 9999px;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+.navbar {
+  height: 73px;
+  background-color: var(--bgcol2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 24px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-radius: var(--b-rad);
+}
+
+.navbar .logo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .logo img {
+  height: 38px;
+}
+
+.navbar .path2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .path2 img {
+  height: 38px;
+}
+
+.navbar .path2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .path2 ul li {
+  list-style: none;
+  margin-right: 30px;
+  font-size: 16px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.navbar .path2 ul li select {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+
+.navbar .path2 button {
+  background-color: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.navbar .path2 button p {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.navbar .path2 button .phone {
+  height: 20px;
+}
+
+.navbar .path2 .phone_btn {
+  background-color: #45C86D;
+  padding: 10px;
+  border-radius: 25px;
+}
+/*# sourceMappingURL=style.css.map */
