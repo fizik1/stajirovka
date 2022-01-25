@@ -3,6 +3,7 @@ import Seksiya1 from "./componentalar/row2/Seksiya1";
 import './css/style.css'
 
 
+
 function App() {
   return (
     <div className="App">

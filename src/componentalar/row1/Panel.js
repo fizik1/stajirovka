@@ -5,7 +5,7 @@ import i_ellepse from '../../icons/Ellipse1.png'
 import i_calendar from '../../icons/calendar1.png'
 import { useState } from 'react'
 
-
+import { Link } from "react-router-dom";
 
 function Panel() {
 
@@ -35,7 +35,7 @@ function Panel() {
                     </div>
                     <div className={selected === 1 ? 'content show': 'content'}>
                         <ul>
-                            <li><img src={i_ellepse} alt="" />General information</li>
+                            <li><img src={i_ellepse} alt="" /><Link to="/addTour">General information</Link></li>
                             <li><img src={i_ellepse} alt="" />Dates & price</li>
                             <li><img src={i_ellepse} alt="" />Cancellation police</li>
                             <li><img src={i_ellepse} alt="" />Day byday schedule</li>
