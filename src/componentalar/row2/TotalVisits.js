@@ -3,6 +3,47 @@ import { Link } from "react-router-dom";
 
 
 function TotalVisits() {
+    let json = localStorage.getItem('items')
+    let array = JSON.parse(json)
+    console.log(array);
+    let card = array.map((card, key)=>{
+        return(
+            <div className="card">
+                    <div className="image">
+                        <img src="/img/card1.png" alt="error" />
+                        <p>{card.t_title}</p>
+                    </div>
+                    <div className="content">
+                        <div className="date">
+                            <select>
+                                <option value="one" key="">Nov 30 - Dec 02</option>
+                            </select>
+                        </div>
+                        <div className="seats">
+                            <p>Seats left:</p>
+                            <select>
+                                <option value="one" key="">1</option>
+                            </select>
+                            <p>from 10</p>
+                        </div>
+                        <div className="seen">
+                            <div>
+                                <img src="/icons/eye.png" alt="" />
+                                <p>7</p>
+                            </div>
+                            <div>
+                                <img src="/icons/basket.png" alt="" />
+                                <p>3</p>
+                            </div>
+                            <div className="button">
+                                <button>Ready</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        )
+    })
+
     return(
         
         <div className="visits">
@@ -68,105 +109,7 @@ function TotalVisits() {
                         </div>
                     </div>
                 </div>
-                <div className="card">
-                    <div className="image">
-                        <img src="/img/card1.png" alt="error" />
-                        <p>Samarqand</p>
-                    </div>
-                    <div className="content">
-                        <div className="date">
-                            <select>
-                                <option value="one" key="">Nov 30 - Dec 02</option>
-                            </select>
-                        </div>
-                        <div className="seats">
-                            <p>Seats left:</p>
-                            <select>
-                                <option value="one" key="">1</option>
-                            </select>
-                            <p>from 10</p>
-                        </div>
-                        <div className="seen">
-                            <div>
-                                <img src="/icons/eye.png" alt="" />
-                                <p>7</p>
-                            </div>
-                            <div>
-                                <img src="/icons/basket.png" alt="" />
-                                <p>3</p>
-                            </div>
-                            <div className="button">
-                                <button>Ready</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="card">
-                    <div className="image">
-                        <img src="/img/card1.png" alt="error" />
-                        <p>Samarqand</p>
-                    </div>
-                    <div className="content">
-                        <div className="date">
-                            <select>
-                                <option value="one" key="">Nov 30 - Dec 02</option>
-                            </select>
-                        </div>
-                        <div className="seats">
-                            <p>Seats left:</p>
-                            <select>
-                                <option value="one" key="">1</option>
-                            </select>
-                            <p>from 10</p>
-                        </div>
-                        <div className="seen">
-                            <div>
-                                <img src="/icons/eye.png" alt="" />
-                                <p>7</p>
-                            </div>
-                            <div>
-                                <img src="/icons/basket.png" alt="" />
-                                <p>3</p>
-                            </div>
-                            <div className="button">
-                                <button>Ready</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="card">
-                    <div className="image">
-                        <img src="/img/card1.png" alt="error" />
-                        <p>Samarqand</p>
-                    </div>
-                    <div className="content">
-                        <div className="date">
-                            <select>
-                                <option value="one" key="">Nov 30 - Dec 02</option>
-                            </select>
-                        </div>
-                        <div className="seats">
-                            <p>Seats left:</p>
-                            <select>
-                                <option value="one" key="">1</option>
-                            </select>
-                            <p>from 10</p>
-                        </div>
-                        <div className="seen">
-                            <div>
-                                <img src="/icons/eye.png" alt="" />
-                                <p>7</p>
-                            </div>
-                            <div>
-                                <img src="/icons/basket.png" alt="" />
-                                <p>3</p>
-                            </div>
-                            <div className="button">
-                                <button>Ready</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {card}
             </div>
         </div>
     

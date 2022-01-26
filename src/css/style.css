@@ -452,6 +452,14 @@ body {
   font-size: 15px;
 }
 
+.form .forma .row .inputs label select:focus {
+  background-color: var(--bgcol1);
+}
+
+.form .forma .row .inputs label input[type="file" i] {
+  padding: 3px;
+}
+
 .form .forma .row .alert {
   display: -webkit-box;
   display: -ms-flexbox;

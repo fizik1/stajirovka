@@ -272,6 +272,7 @@ body{
                 img{
                     height: 7px;
                 }
+                
             }
             .btn1{
                 background: linear-gradient(270deg, #003AD2 0%, #0097EC 100%)
@@ -327,6 +328,12 @@ body{
                         color: #D1D9E6;
                         padding: 0 10px;
                         font-size: 15px;
+                        &:focus{
+                            background-color: var(--bgcol1);
+                        }
+                    }
+                    input[type="file" i]{
+                        padding: 3px;
                     }
                 }
             }
