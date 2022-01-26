@@ -201,6 +201,7 @@ body{
                 color: #fff;
                 display: flex;
                 flex-flow: column;
+                cursor: pointer;
                 select{
                     background-color: transparent;
                     border: none;
@@ -214,6 +215,7 @@ body{
             border: none;
             display: flex;
             align-items: center;
+            cursor: pointer;
             p{
                 margin-right: 10px;
                 color: #fff;

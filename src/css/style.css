@@ -278,6 +278,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  cursor: pointer;
 }
 
 .navbar .path2 ul li select {
@@ -296,6 +297,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   margin-right: 10px;
 }
 
