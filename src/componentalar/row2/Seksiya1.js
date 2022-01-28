@@ -6,6 +6,7 @@ import {
     Routes,
     Route
   } from "react-router-dom";
+import CopiedForm from "./CopiedForm";
 
 
 
@@ -15,7 +16,7 @@ function Seksiya1(){
             <Nav/>
             {/* <BrowserRouter> */}
                 <Routes>
-                    <Route path="/CopiedForm" element={<Form />} />
+                    <Route path="/CopiedForm" element={<CopiedForm />} />
                     <Route path="/addTour" element={<Form />} />
                     <Route path="/" element={<TotalVisits />} />
                 </Routes>

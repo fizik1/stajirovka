@@ -1,5 +1,3 @@
-
-
 import i_Stroke2 from '../../icons/Stroke2.png'
 import i_alert from '../../icons/alert.png'
 import React from 'react';
@@ -9,22 +7,26 @@ import { useNavigate } from 'react-router-dom';
 function CopiedForm(){
 
     let navigate = useNavigate();
-    console.log('salom');
-    // let visits= JSON.parse(localStorage.getItem('uzgaruvchi'))
-        // inp1 = React.createRef(),
-        // inp2 = '',
-        // inp3 = '',
-        // inp4 = '',
-        // inp5 = '',
-        // inp6 = React.createRef(),
-        // inp7 = React.createRef(),
-        // inp8 = React.createRef(),
-        // inp9 = React.createRef(),
-        // inp10 = '',
-        // inp11 = false;
-    // document.getElementById('inp1').value = visits.let1
-    console.log(visits.let1);
-    console.log(document.getElementById('inp1'));
+    let uzgaruvchi= JSON.parse(localStorage.getItem('uzgaruvchi')),
+        kurildi = uzgaruvchi.let12,
+        visits = JSON.parse(localStorage.getItem('items')),
+        inp1 = React.createRef(),
+        inp2 = '',
+        inp3 = '',
+        inp4 = '',
+        inp5 = '',
+        inp6 = React.createRef(),
+        inp7 = React.createRef(),
+        inp8 = React.createRef(),
+        inp9 = React.createRef(),
+        inp10 = '',
+        inp11 = false;
+
+    // console.log(visits.let1);
+    kurildi+=1
+    console.log(uzgaruvchi);
+
+
 
     function checkHandler(){
         inp11 = true
@@ -50,7 +52,7 @@ function CopiedForm(){
     }
     
     async function handle(){
-        if (inp1.current.value!=''&&inp3!=''&&inp5!=''&&inp6!=''&&inp11==true){
+        if (inp1.current.value!=''){
             let card = {
                 t_title:inp1.current.value,
                 main_tour:inp2,
@@ -63,10 +65,10 @@ function CopiedForm(){
                 ent_time:inp9.current.value,
                 formdata:inp10,
                 check:inp11,
-                seen:1,
-                id:Date.now()
+                seen:kurildi,
             }
-            visits.push(card)
+            console.log(kurildi);
+            visits.splice(uzgaruvchi.kalit,1,card)
             let text = JSON.stringify(visits);
             localStorage.setItem('items',text)
             navigate('/')
@@ -92,7 +94,7 @@ function CopiedForm(){
                     <div className='inputs'>
                         <label>
                             Tour title*
-                            <input type="text" ref={inp1} id='inp1' />
+                            <input type="text" ref={inp1} id='inp1' defaultValue={uzgaruvchi.let1} />
                         </label>
                     </div>
                     <div className='alert'>
@@ -104,7 +106,7 @@ function CopiedForm(){
                     <div className='inputs'>
                         <label>
                             Main tour type*
-                            <select onChange={e=>clickHanldler(e)} id='two'  >
+                            <select onChange={e=>clickHanldler(e)} id='two' defaultValue={uzgaruvchi.let2} >
                                 <option value="" key=""></option>
                                 <option value="bi" key="">bir</option>
                                 <option value="ikki" key="">ikki</option>
@@ -118,7 +120,7 @@ function CopiedForm(){
                     <div className='inputs'>
                         <label>
                             Additional tour types*
-                            <select onChange={e=>clickHanldler(e)} id='three'>
+                            <select onChange={e=>clickHanldler(e)} id='three' defaultValue={uzgaruvchi.let3}>
                                 <option value="" key=""></option>
                                 <option value="Sigmbkr hufytenciv" key="">Sigmbkr hufytenciv</option>
                                 <option value="hufytenciv Sigmbkr" key="">hufytenciv Sigmbkr </option>
@@ -135,7 +137,7 @@ function CopiedForm(){
                     <div className='inputs'>
                         <label>
                             Tour destination / country*
-                            <select onChange={e=>clickHanldler(e)} id='four'>
+                            <select onChange={e=>clickHanldler(e)} id='four' defaultValue={uzgaruvchi.let4}>
                                 <option value="" key=""></option>
                                 <option value="Sigmbkr hufytenciv" key="">Sigmbkr hufytenciv</option>
                                 <option value="hufytenciv Sigmbkr" key="">hufytenciv Sigmbkr </option>
@@ -149,7 +151,7 @@ function CopiedForm(){
                     <div className='inputs'>
                         <label>
                             Region
-                            <select onChange={e=>clickHanldler(e)} id='five'>
+                            <select onChange={e=>clickHanldler(e)} id='five' defaultValue={uzgaruvchi.let5}>
                                 <option value="" key=""></option>
                                 <option value="one" key="">Samarkand</option>
                                 <option value="two" key="">Bukhara</option>
@@ -166,7 +168,7 @@ function CopiedForm(){
                     <div className='inputs'>
                         <label>
                             Starting point (city)*
-                            <input type='number' ref={inp6} placeholder='Starting city name'  />
+                            <input type='number' ref={inp6} placeholder='Starting city name' defaultValue={uzgaruvchi.let6}/>
                         </label>
                     </div>
                     <div className='alert'>
@@ -178,7 +180,7 @@ function CopiedForm(){
                     <div className='inputs'>
                         <label>
                         Arrival time (local):
-                            <input type="text" ref={inp7} />
+                            <input type="text" ref={inp7} defaultValue={uzgaruvchi.let7} />
                         </label>
                     </div>
 
@@ -187,7 +189,7 @@ function CopiedForm(){
                     <div className='inputs'>
                         <label>
                             Final destination (city)*
-                            <input type="text" ref={inp8} placeholder='Starting city name' />
+                            <input type="text" ref={inp8} placeholder='Starting city name' defaultValue={uzgaruvchi.let8} />
                         </label>
                     </div>
 
@@ -196,7 +198,7 @@ function CopiedForm(){
                     <div className='inputs'>
                         <label>
                         Tour end time (local):
-                            <input type="text" ref={inp9} />
+                            <input type="text" ref={inp9} defaultValue={uzgaruvchi.let9}/>
                         </label>
                     </div>
 
@@ -205,7 +207,7 @@ function CopiedForm(){
                     <div className='inputs'>
                         <label>
                         Enter a picture*
-                        <input type="file" onChange={e=>changeFile(e)} />
+                        <input type="file" onChange={e=>changeFile(e)}/>
                         </label>
                     </div>
                     <div className='alert'>
@@ -217,7 +219,7 @@ function CopiedForm(){
                 
                 <div className='row'>
                     <div className='check-div'>
-                        <label onClick={checkHandler}>
+                        <label onChange={checkHandler} defaultValue={uzgaruvchi.let11}>
                             <input type="checkbox" />
                             Access by link only
                         </label>

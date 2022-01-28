@@ -7,7 +7,6 @@ function TotalVisits() {
     let navigate = useNavigate();
 
     let json = localStorage.getItem('items')||Boolean(false)
-    console.log(json);
     if (json==false){
         return(
         
@@ -48,8 +47,6 @@ function TotalVisits() {
         )
     }else {
         let array = JSON.parse(json)
-
-        console.log(localStorage);
         let count= JSON.parse(localStorage.getItem('seen'))||1;
         
         const countF = ()=>{
@@ -59,17 +56,7 @@ function TotalVisits() {
         
         
         console.log(count);
-    
-        // const finish = ()=>{
-    
-        // }
-        
-    
-    
-    
-        
-        
-    
+
         let cart = array.map((card, key)=>{
 
             const handlerEdit = ()=>{
@@ -85,11 +72,12 @@ function TotalVisits() {
                     let9:card.ent_time,
                     let10:card.formdata,
                     let11:card.check,
-                    kalit:key+1
+                    let12:card.seen,
+                    kalit:key
                 };
                 let uzgar = JSON.stringify(uzgaruvchi);
                 localStorage.setItem('uzgaruvchi', uzgar)
-                console.log(localStorage.getItem('uzgaruvchi'))
+                // console.log(localStorage.getItem('uzgaruvchi'))
                 navigate('/CopiedForm')
             }
 
@@ -98,7 +86,8 @@ function TotalVisits() {
 
             let rasm = '/Joylar/'+card.formdata
     
-            card.seen+=1
+            // card.seen+=1
+            console.log(card);
     
     
             let box = []
@@ -110,7 +99,7 @@ function TotalVisits() {
             let options= box.map((son,key)=>{
                 return <option value="one" key={key}>{son}</option>
             })
-            console.log(array);
+            // console.log(array);
             
             return(
                 <div className="card">
@@ -137,7 +126,7 @@ function TotalVisits() {
                             <div className="seen">
                                 <div>
                                     <img src="/icons/eye.png" alt="" />
-                                    <p>{count}</p>
+                                    <p>{card.seen}</p>
                                 </div>
                                 <div>
                                     <img src="/icons/basket.png" alt="" />
