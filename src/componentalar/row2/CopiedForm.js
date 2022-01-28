@@ -1,25 +1,30 @@
+
+
 import i_Stroke2 from '../../icons/Stroke2.png'
 import i_alert from '../../icons/alert.png'
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-function Form(props){
+function CopiedForm(){
 
     let navigate = useNavigate();
-
-    let visits= JSON.parse(localStorage.getItem('items'))||[],
-        inp1 = React.createRef(),
-        inp2 = '',
-        inp3 = '',
-        inp4 = '',
-        inp5 = '',
-        inp6 = React.createRef(),
-        inp7 = React.createRef(),
-        inp8 = React.createRef(),
-        inp9 = React.createRef(),
-        inp10 = '',
-        inp11 = false;
+    console.log('salom');
+    // let visits= JSON.parse(localStorage.getItem('uzgaruvchi'))
+        // inp1 = React.createRef(),
+        // inp2 = '',
+        // inp3 = '',
+        // inp4 = '',
+        // inp5 = '',
+        // inp6 = React.createRef(),
+        // inp7 = React.createRef(),
+        // inp8 = React.createRef(),
+        // inp9 = React.createRef(),
+        // inp10 = '',
+        // inp11 = false;
+    // document.getElementById('inp1').value = visits.let1
+    console.log(visits.let1);
+    console.log(document.getElementById('inp1'));
 
     function checkHandler(){
         inp11 = true
@@ -87,7 +92,7 @@ function Form(props){
                     <div className='inputs'>
                         <label>
                             Tour title*
-                            <input type="text" ref={inp1} />
+                            <input type="text" ref={inp1} id='inp1' />
                         </label>
                     </div>
                     <div className='alert'>
@@ -228,4 +233,4 @@ function Form(props){
 }
 
 
-export default Form;
+export default CopiedForm;

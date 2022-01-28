@@ -29,6 +29,10 @@ body {
   padding: 25px;
 }
 
+button {
+  cursor: pointer;
+}
+
 .seksiya1 {
   width: 100%;
   padding-left: 26px;
@@ -584,6 +588,11 @@ body {
       -ms-flex-pack: start;
           justify-content: start;
   padding-top: 20px;
+}
+
+.visits .cards h4 {
+  color: #fff;
+  font-size: 25px;
 }
 
 .visits .cards .card {

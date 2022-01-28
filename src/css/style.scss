@@ -12,6 +12,7 @@ body{
     overflow-y: scroll;
 }
 
+
 :root{
     --bgcol1:#000033;
     --bgcol2:#2B2B4B;
@@ -26,6 +27,9 @@ body{
     background-color: var(--bgcol1);
     padding: 25px;
 
+}
+button{
+    cursor: pointer;
 }
 .seksiya1{
     width: 100%;
@@ -427,6 +431,10 @@ body{
         flex-flow: row wrap;
         justify-content: start;
         padding-top: 20px;
+        h4{
+            color: #fff;
+            font-size: 25px;
+        }
         .card{
             width: 30%;
             background-color: #D5D5DB;
